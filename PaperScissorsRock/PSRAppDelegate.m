@@ -12,7 +12,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    //configure ubertesters -- API key is in the plist
+//    [[Ubertesters shared] initialize];
+//    [[Ubertesters shared] UTLog:@"Launch Success!" withLevel:UTLogLevelInfo];
+    
+    //initialization code
+    _mcManager = [[MCManager alloc] init];
+    
     return YES;
 }
 							

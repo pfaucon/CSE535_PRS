@@ -10,4 +10,7 @@
 
 @interface PSRViewController : UIViewController
 
+
+@property (weak, nonatomic) IBOutlet UITextView *tvChat;
+
 @end

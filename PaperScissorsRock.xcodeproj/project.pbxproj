@@ -21,6 +21,18 @@
 		CE04701919CA36DD00AE0B9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE046FFB19CA36DD00AE0B9E /* UIKit.framework */; };
 		CE04702119CA36DD00AE0B9E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE04701F19CA36DD00AE0B9E /* InfoPlist.strings */; };
 		CE04702319CA36DD00AE0B9E /* PaperScissorsRockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE04702219CA36DD00AE0B9E /* PaperScissorsRockTests.m */; };
+		CE04702D19CA37EB00AE0B9E /* UbertestersSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04702C19CA37EB00AE0B9E /* UbertestersSDK.framework */; };
+		CE04702F19CA380E00AE0B9E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04702E19CA380E00AE0B9E /* AdSupport.framework */; };
+		CE04703119CA381200AE0B9E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04703019CA381200AE0B9E /* QuartzCore.framework */; };
+		CE04703319CA381700AE0B9E /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04703219CA381700AE0B9E /* CoreImage.framework */; };
+		CE04703519CA381F00AE0B9E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04703419CA381F00AE0B9E /* SystemConfiguration.framework */; };
+		CE04703719CA382400AE0B9E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04703619CA382400AE0B9E /* CoreTelephony.framework */; };
+		CE04703919CA382900AE0B9E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04703819CA382900AE0B9E /* CoreLocation.framework */; };
+		CE04703B19CA382E00AE0B9E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04703A19CA382E00AE0B9E /* AudioToolbox.framework */; };
+		CE04703D19CA383200AE0B9E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04703C19CA383200AE0B9E /* OpenGLES.framework */; };
+		CE04703F19CA383600AE0B9E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04703E19CA383600AE0B9E /* CoreMotion.framework */; };
+		CE04704319CA563F00AE0B9E /* MCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE04704219CA563F00AE0B9E /* MCManager.m */; };
+		CE04704619CA57F300AE0B9E /* ConnectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE04704519CA57F300AE0B9E /* ConnectionsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +65,20 @@
 		CE04701E19CA36DD00AE0B9E /* PaperScissorsRockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PaperScissorsRockTests-Info.plist"; sourceTree = "<group>"; };
 		CE04702019CA36DD00AE0B9E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE04702219CA36DD00AE0B9E /* PaperScissorsRockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaperScissorsRockTests.m; sourceTree = "<group>"; };
+		CE04702C19CA37EB00AE0B9E /* UbertestersSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UbertestersSDK.framework; path = PaperScissorsRock/UbertestersSDK.framework; sourceTree = "<group>"; };
+		CE04702E19CA380E00AE0B9E /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		CE04703019CA381200AE0B9E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CE04703219CA381700AE0B9E /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		CE04703419CA381F00AE0B9E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CE04703619CA382400AE0B9E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		CE04703819CA382900AE0B9E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CE04703A19CA382E00AE0B9E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		CE04703C19CA383200AE0B9E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		CE04703E19CA383600AE0B9E /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		CE04704119CA563F00AE0B9E /* MCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCManager.h; sourceTree = "<group>"; };
+		CE04704219CA563F00AE0B9E /* MCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCManager.m; sourceTree = "<group>"; };
+		CE04704419CA57F300AE0B9E /* ConnectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionsViewController.h; sourceTree = "<group>"; };
+		CE04704519CA57F300AE0B9E /* ConnectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +86,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE04703F19CA383600AE0B9E /* CoreMotion.framework in Frameworks */,
+				CE04703D19CA383200AE0B9E /* OpenGLES.framework in Frameworks */,
+				CE04703B19CA382E00AE0B9E /* AudioToolbox.framework in Frameworks */,
+				CE04703919CA382900AE0B9E /* CoreLocation.framework in Frameworks */,
+				CE04703719CA382400AE0B9E /* CoreTelephony.framework in Frameworks */,
+				CE04703519CA381F00AE0B9E /* SystemConfiguration.framework in Frameworks */,
+				CE04703319CA381700AE0B9E /* CoreImage.framework in Frameworks */,
+				CE04703119CA381200AE0B9E /* QuartzCore.framework in Frameworks */,
+				CE04702F19CA380E00AE0B9E /* AdSupport.framework in Frameworks */,
 				CE046FFA19CA36DD00AE0B9E /* CoreGraphics.framework in Frameworks */,
 				CE046FFC19CA36DD00AE0B9E /* UIKit.framework in Frameworks */,
+				CE04702D19CA37EB00AE0B9E /* UbertestersSDK.framework in Frameworks */,
 				CE046FF819CA36DD00AE0B9E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +137,16 @@
 		CE046FF619CA36DD00AE0B9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE04703E19CA383600AE0B9E /* CoreMotion.framework */,
+				CE04703C19CA383200AE0B9E /* OpenGLES.framework */,
+				CE04703A19CA382E00AE0B9E /* AudioToolbox.framework */,
+				CE04703819CA382900AE0B9E /* CoreLocation.framework */,
+				CE04703619CA382400AE0B9E /* CoreTelephony.framework */,
+				CE04703419CA381F00AE0B9E /* SystemConfiguration.framework */,
+				CE04703219CA381700AE0B9E /* CoreImage.framework */,
+				CE04703019CA381200AE0B9E /* QuartzCore.framework */,
+				CE04702E19CA380E00AE0B9E /* AdSupport.framework */,
+				CE04702C19CA37EB00AE0B9E /* UbertestersSDK.framework */,
 				CE046FF719CA36DD00AE0B9E /* Foundation.framework */,
 				CE046FF919CA36DD00AE0B9E /* CoreGraphics.framework */,
 				CE046FFB19CA36DD00AE0B9E /* UIKit.framework */,
@@ -112,11 +158,14 @@
 		CE046FFD19CA36DD00AE0B9E /* PaperScissorsRock */ = {
 			isa = PBXGroup;
 			children = (
+				CE04704019CA562E00AE0B9E /* Mesh Networking */,
 				CE04700619CA36DD00AE0B9E /* PSRAppDelegate.h */,
 				CE04700719CA36DD00AE0B9E /* PSRAppDelegate.m */,
 				CE04700919CA36DD00AE0B9E /* Main.storyboard */,
 				CE04700C19CA36DD00AE0B9E /* PSRViewController.h */,
 				CE04700D19CA36DD00AE0B9E /* PSRViewController.m */,
+				CE04704419CA57F300AE0B9E /* ConnectionsViewController.h */,
+				CE04704519CA57F300AE0B9E /* ConnectionsViewController.m */,
 				CE04700F19CA36DD00AE0B9E /* Images.xcassets */,
 				CE046FFE19CA36DD00AE0B9E /* Supporting Files */,
 			);
@@ -150,6 +199,15 @@
 				CE04701F19CA36DD00AE0B9E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE04704019CA562E00AE0B9E /* Mesh Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CE04704119CA563F00AE0B9E /* MCManager.h */,
+				CE04704219CA563F00AE0B9E /* MCManager.m */,
+			);
+			name = "Mesh Networking";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +258,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Team Roflcopter";
 				TargetAttributes = {
+					CE046FF319CA36DD00AE0B9E = {
+						DevelopmentTeam = H276N72W5Y;
+					};
 					CE04701419CA36DD00AE0B9E = {
 						TestTargetID = CE046FF319CA36DD00AE0B9E;
 					};
@@ -250,7 +311,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE04704619CA57F300AE0B9E /* ConnectionsViewController.m in Sources */,
 				CE04700E19CA36DD00AE0B9E /* PSRViewController.m in Sources */,
+				CE04704319CA563F00AE0B9E /* MCManager.m in Sources */,
 				CE04700819CA36DD00AE0B9E /* PSRAppDelegate.m in Sources */,
 				CE04700419CA36DD00AE0B9E /* main.m in Sources */,
 			);
@@ -377,10 +440,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PaperScissorsRock",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PaperScissorsRock/PaperScissorsRock-Prefix.pch";
 				INFOPLIST_FILE = "PaperScissorsRock/PaperScissorsRock-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -390,10 +460,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PaperScissorsRock",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PaperScissorsRock/PaperScissorsRock-Prefix.pch";
 				INFOPLIST_FILE = "PaperScissorsRock/PaperScissorsRock-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
