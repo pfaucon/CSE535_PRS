@@ -34,12 +34,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    //this seems to have problems if it is run immediately
-//    [self performSelector:@selector(configureManager) withObject:nil afterDelay:0.0];
-    
     _appDelegate = (PSRAppDelegate *)[[UIApplication sharedApplication] delegate];
     [[_appDelegate mcManager] setupPeerAndSessionWithDisplayName:[UIDevice currentDevice].name];
-    [[_appDelegate mcManager] advertiseSelf:_swVisible.isOn];
+    [[_appDelegate mcManager] advertiseSelf:YES];
     
     [_txtName setDelegate:self];
     
@@ -74,7 +71,7 @@
     _appDelegate.mcManager.session = nil;
     _appDelegate.mcManager.browser = nil;
     
-    if ([_swVisible isOn]) {
+    if (YES) {
         [_appDelegate.mcManager.advertiser stop];
     }
     _appDelegate.mcManager.advertiser = nil;
@@ -82,7 +79,7 @@
     
     [_appDelegate.mcManager setupPeerAndSessionWithDisplayName:_txtName.text];
     [_appDelegate.mcManager setupMCBrowser];
-    [_appDelegate.mcManager advertiseSelf:_swVisible.isOn];
+    [_appDelegate.mcManager advertiseSelf:YES];
     
     return YES;
 }
@@ -98,7 +95,7 @@
 
 
 - (IBAction)toggleVisibility:(id)sender {
-    [_appDelegate.mcManager advertiseSelf:_swVisible.isOn];
+    [_appDelegate.mcManager advertiseSelf:YES];
 }
 
 
