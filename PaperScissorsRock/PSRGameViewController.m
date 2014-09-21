@@ -43,7 +43,7 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.usernameLabel.text = [NSString stringWithFormat:@"Welcome %@!",self.username];
+    self.usernameLabel.text = [NSString stringWithFormat:@"Welcome %@!",self.gameUser.username];
 }
 
 - (IBAction)chooseRock:(id)sender {

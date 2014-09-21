@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>67939A35-7F8E-447A-9D41-40A3FB78FE2E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PaperScissorsRock</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AAB16820C32C670F7B8DB295C4D1A260F39E8285</key>
+		<string>github.com:pfaucon/CSE535_PRS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PaperScissorsRock.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AAB16820C32C670F7B8DB295C4D1A260F39E8285</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:pfaucon/CSE535_PRS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>AAB16820C32C670F7B8DB295C4D1A260F39E8285</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AAB16820C32C670F7B8DB295C4D1A260F39E8285</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CSE535_PRS</string>
+		</dict>
+	</array>
+</dict>
+</plist>

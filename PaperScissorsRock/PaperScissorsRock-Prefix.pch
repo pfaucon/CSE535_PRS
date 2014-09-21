@@ -16,4 +16,7 @@
 
     // added by PCF
     #import <UbertestersSDK/Ubertesters.h>
+
+    // added by HD
+    #import "PSRConstants.h"
 #endif

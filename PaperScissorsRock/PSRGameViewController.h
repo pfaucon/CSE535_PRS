@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PSRUser.h"
 
 @interface PSRGameViewController : UIViewController
 
 @property NSString *username;
+@property (nonatomic, strong) PSRUser *gameUser;
+
 @end

@@ -17,8 +17,6 @@
 		CE04700E19CA36DD00AE0B9E /* PSRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE04700D19CA36DD00AE0B9E /* PSRViewController.m */; };
 		CE04701019CA36DD00AE0B9E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE04700F19CA36DD00AE0B9E /* Images.xcassets */; };
 		CE04701719CA36DD00AE0B9E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04701619CA36DD00AE0B9E /* XCTest.framework */; };
-		CE04701819CA36DD00AE0B9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE046FF719CA36DD00AE0B9E /* Foundation.framework */; };
-		CE04701919CA36DD00AE0B9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE046FFB19CA36DD00AE0B9E /* UIKit.framework */; };
 		CE04702119CA36DD00AE0B9E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE04701F19CA36DD00AE0B9E /* InfoPlist.strings */; };
 		CE04702319CA36DD00AE0B9E /* PaperScissorsRockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE04702219CA36DD00AE0B9E /* PaperScissorsRockTests.m */; };
 		CE04702D19CA37EB00AE0B9E /* UbertestersSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04702C19CA37EB00AE0B9E /* UbertestersSDK.framework */; };
@@ -36,6 +34,22 @@
 		CE04704A19CA812A00AE0B9E /* PSRLandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE04704919CA812A00AE0B9E /* PSRLandingViewController.m */; };
 		CE04704D19CA850700AE0B9E /* PSRGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE04704C19CA850700AE0B9E /* PSRGameViewController.m */; };
 		CE04705019CA857C00AE0B9E /* PSRGame.m in Sources */ = {isa = PBXBuildFile; fileRef = CE04704F19CA857C00AE0B9E /* PSRGame.m */; };
+		DD8219BE19CE31B0004E96BE /* PSRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8219BD19CE31B0004E96BE /* PSRUser.m */; };
+		DD8219C119CE32E1004E96BE /* PSRConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = DD8219C019CE32E1004E96BE /* PSRConstants.m */; };
+		DD8219CD19CE355B004E96BE /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04703E19CA383600AE0B9E /* CoreMotion.framework */; };
+		DD8219CE19CE355B004E96BE /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04703C19CA383200AE0B9E /* OpenGLES.framework */; };
+		DD8219CF19CE355B004E96BE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04703A19CA382E00AE0B9E /* AudioToolbox.framework */; };
+		DD8219D019CE355B004E96BE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04703819CA382900AE0B9E /* CoreLocation.framework */; };
+		DD8219D119CE355B004E96BE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04703619CA382400AE0B9E /* CoreTelephony.framework */; };
+		DD8219D219CE355B004E96BE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04703419CA381F00AE0B9E /* SystemConfiguration.framework */; };
+		DD8219D319CE355B004E96BE /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04703219CA381700AE0B9E /* CoreImage.framework */; };
+		DD8219D419CE355B004E96BE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04703019CA381200AE0B9E /* QuartzCore.framework */; };
+		DD8219D519CE355B004E96BE /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04702E19CA380E00AE0B9E /* AdSupport.framework */; };
+		DD8219D619CE355B004E96BE /* UbertestersSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE04702C19CA37EB00AE0B9E /* UbertestersSDK.framework */; };
+		DD8219D719CE355B004E96BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE046FF719CA36DD00AE0B9E /* Foundation.framework */; };
+		DD8219D819CE355B004E96BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE046FF919CA36DD00AE0B9E /* CoreGraphics.framework */; };
+		DD8219D919CE355B004E96BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE046FFB19CA36DD00AE0B9E /* UIKit.framework */; };
+		EE1EB97D141545508D606293 /* libPods-PaperScissorsRock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BF69D1985408F88A877A8 /* libPods-PaperScissorsRock.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC33806F4CDB47579E20341E /* Pods-PaperScissorsRock.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperScissorsRock.xcconfig"; path = "Pods/Pods-PaperScissorsRock.xcconfig"; sourceTree = "<group>"; };
 		CE046FF419CA36DD00AE0B9E /* PaperScissorsRock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperScissorsRock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE046FF719CA36DD00AE0B9E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CE046FF919CA36DD00AE0B9E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -88,6 +103,11 @@
 		CE04704C19CA850700AE0B9E /* PSRGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRGameViewController.m; sourceTree = "<group>"; };
 		CE04704E19CA857C00AE0B9E /* PSRGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRGame.h; sourceTree = "<group>"; };
 		CE04704F19CA857C00AE0B9E /* PSRGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRGame.m; sourceTree = "<group>"; };
+		DD8219BC19CE31B0004E96BE /* PSRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRUser.h; sourceTree = "<group>"; };
+		DD8219BD19CE31B0004E96BE /* PSRUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRUser.m; sourceTree = "<group>"; };
+		DD8219BF19CE32E1004E96BE /* PSRConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRConstants.h; sourceTree = "<group>"; };
+		DD8219C019CE32E1004E96BE /* PSRConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRConstants.m; sourceTree = "<group>"; };
+		FF4BF69D1985408F88A877A8 /* libPods-PaperScissorsRock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PaperScissorsRock.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +128,7 @@
 				CE046FFC19CA36DD00AE0B9E /* UIKit.framework in Frameworks */,
 				CE04702D19CA37EB00AE0B9E /* UbertestersSDK.framework in Frameworks */,
 				CE046FF819CA36DD00AE0B9E /* Foundation.framework in Frameworks */,
+				EE1EB97D141545508D606293 /* libPods-PaperScissorsRock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,9 +136,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD8219D819CE355B004E96BE /* CoreGraphics.framework in Frameworks */,
 				CE04701719CA36DD00AE0B9E /* XCTest.framework in Frameworks */,
-				CE04701919CA36DD00AE0B9E /* UIKit.framework in Frameworks */,
-				CE04701819CA36DD00AE0B9E /* Foundation.framework in Frameworks */,
+				DD8219D519CE355B004E96BE /* AdSupport.framework in Frameworks */,
+				DD8219D619CE355B004E96BE /* UbertestersSDK.framework in Frameworks */,
+				DD8219D219CE355B004E96BE /* SystemConfiguration.framework in Frameworks */,
+				DD8219D919CE355B004E96BE /* UIKit.framework in Frameworks */,
+				DD8219D019CE355B004E96BE /* CoreLocation.framework in Frameworks */,
+				DD8219D319CE355B004E96BE /* CoreImage.framework in Frameworks */,
+				DD8219CD19CE355B004E96BE /* CoreMotion.framework in Frameworks */,
+				DD8219D719CE355B004E96BE /* Foundation.framework in Frameworks */,
+				DD8219CE19CE355B004E96BE /* OpenGLES.framework in Frameworks */,
+				DD8219D119CE355B004E96BE /* CoreTelephony.framework in Frameworks */,
+				DD8219CF19CE355B004E96BE /* AudioToolbox.framework in Frameworks */,
+				DD8219D419CE355B004E96BE /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +163,7 @@
 				CE04701C19CA36DD00AE0B9E /* PaperScissorsRockTests */,
 				CE046FF619CA36DD00AE0B9E /* Frameworks */,
 				CE046FF519CA36DD00AE0B9E /* Products */,
+				BC33806F4CDB47579E20341E /* Pods-PaperScissorsRock.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +193,7 @@
 				CE046FF919CA36DD00AE0B9E /* CoreGraphics.framework */,
 				CE046FFB19CA36DD00AE0B9E /* UIKit.framework */,
 				CE04701619CA36DD00AE0B9E /* XCTest.framework */,
+				FF4BF69D1985408F88A877A8 /* libPods-PaperScissorsRock.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -180,6 +214,10 @@
 				CE04704719CA7FE600AE0B9E /* phase 2 sources */,
 				CE04700F19CA36DD00AE0B9E /* Images.xcassets */,
 				CE046FFE19CA36DD00AE0B9E /* Supporting Files */,
+				DD8219BC19CE31B0004E96BE /* PSRUser.h */,
+				DD8219BD19CE31B0004E96BE /* PSRUser.m */,
+				DD8219BF19CE32E1004E96BE /* PSRConstants.h */,
+				DD8219C019CE32E1004E96BE /* PSRConstants.m */,
 			);
 			path = PaperScissorsRock;
 			sourceTree = "<group>";
@@ -240,9 +278,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE04702619CA36DD00AE0B9E /* Build configuration list for PBXNativeTarget "PaperScissorsRock" */;
 			buildPhases = (
+				522294781E0B4FDCBF91A9C6 /* Check Pods Manifest.lock */,
 				CE046FF019CA36DD00AE0B9E /* Sources */,
 				CE046FF119CA36DD00AE0B9E /* Frameworks */,
 				CE046FF219CA36DD00AE0B9E /* Resources */,
+				D858B9B6B20942E69185FCEC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -329,15 +369,50 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		522294781E0B4FDCBF91A9C6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D858B9B6B20942E69185FCEC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-PaperScissorsRock-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE046FF019CA36DD00AE0B9E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CE04704A19CA812A00AE0B9E /* PSRLandingViewController.m in Sources */,
+				DD8219BE19CE31B0004E96BE /* PSRUser.m in Sources */,
 				CE04704D19CA850700AE0B9E /* PSRGameViewController.m in Sources */,
 				CE04704619CA57F300AE0B9E /* ConnectionsViewController.m in Sources */,
 				CE04705019CA857C00AE0B9E /* PSRGame.m in Sources */,
+				DD8219C119CE32E1004E96BE /* PSRConstants.m in Sources */,
 				CE04700E19CA36DD00AE0B9E /* PSRViewController.m in Sources */,
 				CE04704319CA563F00AE0B9E /* MCManager.m in Sources */,
 				CE04700819CA36DD00AE0B9E /* PSRAppDelegate.m in Sources */,
@@ -463,6 +538,7 @@
 		};
 		CE04702719CA36DD00AE0B9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC33806F4CDB47579E20341E /* Pods-PaperScissorsRock.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -483,6 +559,7 @@
 		};
 		CE04702819CA36DD00AE0B9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC33806F4CDB47579E20341E /* Pods-PaperScissorsRock.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -509,6 +586,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/PaperScissorsRock",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PaperScissorsRock/PaperScissorsRock-Prefix.pch";
@@ -531,6 +609,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/PaperScissorsRock",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PaperScissorsRock/PaperScissorsRock-Prefix.pch";

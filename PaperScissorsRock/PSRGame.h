@@ -8,11 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger, PSRACTION) {
-    ROCK,
-    PAPER,
-    SCISSORS,
-};
 #define PSRActionString(enum) [@[@"ROCK",@"PAPER",@"SCISSORS"] objectAtIndex:enum]
 #define userTypeString(enum) [@[@"expert",@"parent",@"child",@"unknown"] objectAtIndex:enum];
 

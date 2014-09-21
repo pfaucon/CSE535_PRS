@@ -7,6 +7,7 @@
 //
 
 #import "PSRAppDelegate.h"
+#import "FCModel.h"
 
 @implementation PSRAppDelegate
 
@@ -18,6 +19,8 @@
     
     //initialization code
     _mcManager = [[MCManager alloc] init];
+    
+    [self loadDatabase];
     
     return YES;
 }
@@ -47,6 +50,48 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)loadDatabase
+{
+//    [FCModel closeDatabase];
+    
+    NSString *dbPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"psr.sqlite3"];
+    NSLog(@"DB path: %@", dbPath);
+//    [NSFileManager.defaultManager removeItemAtPath:dbPath error:NULL];
+    
+    [FCModel openDatabaseAtPath:dbPath withSchemaBuilder:^(FMDatabase *db, int *schemaVersion) {
+        [db setCrashOnErrors:YES];
+        db.traceExecution = YES;
+        [db beginTransaction];
+        
+        void (^failedAt)(int statement) = ^(int statement){
+            int lastErrorCode = db.lastErrorCode;
+            NSString *lastErrorMessage = db.lastErrorMessage;
+            [db rollback];
+            NSAssert3(0, @"Migration statement %d failed, code %d: %@", statement, lastErrorCode, lastErrorMessage);
+        };
+        
+        if (*schemaVersion < 1) {
+            if (! [db executeUpdate:
+                   @"CREATE TABLE PSRUser ("
+                   @"   id              INTEGER PRIMARY KEY AUTOINCREMENT,"
+                   @"   username        TEXT NOT NULL,"
+                   @"   gender          INTEGER NOT NULL,"
+                   @"   age             INTEGER NOT NULL,"
+                   @"   winCnt          INTEGER NOT NULL DEFAULT 0,"
+                   @"   lossCnt         INTEGER NOT NULL DEFAULT 0,"
+                   @"   createdTime     INTEGER NOT NULL,"
+                   @"   modifiedTime    INTEGER NOT NULL"
+                   @");"
+                   ]) failedAt(1);
+            if (! [db executeUpdate:@"CREATE UNIQUE INDEX IF NOT EXISTS name ON PSRUser (username);"]) failedAt(2);
+            
+            *schemaVersion = 1;
+        }
+
+        [db commit];
+    }];
 }
 
 @end
