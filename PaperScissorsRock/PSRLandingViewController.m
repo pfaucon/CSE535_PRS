@@ -66,8 +66,6 @@
     } else {
         [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Username already exists" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
     }
-    
-    
 }
 
 - (IBAction)fieldUpdatedContents:(id)sender

@@ -322,6 +322,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Record:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2MC-Dx-N2D">
+                                <rect key="frame" x="20" y="122" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -329,6 +335,7 @@
                     <connections>
                         <outlet property="congratulationsLabel" destination="7NF-wK-A03" id="LhF-5Q-l73"/>
                         <outlet property="opponentsChoiceLabel" destination="ikn-e5-xo6" id="CjK-E5-UqA"/>
+                        <outlet property="recordLabel" destination="2MC-Dx-N2D" id="aFQ-gl-dGJ"/>
                         <outlet property="scoreLabel" destination="hvQ-Ze-msQ" id="0NS-IQ-EB7"/>
                         <outlet property="usernameLabel" destination="M7c-NN-3Eo" id="Dsf-Ra-GIL"/>
                     </connections>

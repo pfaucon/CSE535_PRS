@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *congratulationsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *recordLabel;
 
 @property PSRGame *game;
 @end
@@ -38,12 +39,19 @@
     self.scoreLabel.text = @"";
     self.congratulationsLabel.hidden = YES;
     self.game = [PSRGame new];
+    self.game.gameUser = self.gameUser;
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     self.usernameLabel.text = [NSString stringWithFormat:@"Welcome %@!",self.gameUser.username];
+    [self updateRecordLabel];
+}
+
+- (void)updateRecordLabel
+{
+    self.recordLabel.text = [NSString stringWithFormat:@"Record: %ldW - %ldL",self.gameUser.winCnt, self.gameUser.lossCnt];
 }
 
 - (IBAction)chooseRock:(id)sender {
@@ -63,6 +71,8 @@
     self.opponentsChoiceLabel.text = [NSString stringWithFormat:@"The Computer Picked: %@", PSRActionString(self.game.opponentsLastChoice)];
     
     self.scoreLabel.text = [NSString stringWithFormat:@"%d", self.game.score];
+    
+    [self updateRecordLabel];
 }
 
 @end

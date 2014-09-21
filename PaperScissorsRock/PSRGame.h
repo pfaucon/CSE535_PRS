@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PSRUser.h"
 
 #define PSRActionString(enum) [@[@"ROCK",@"PAPER",@"SCISSORS"] objectAtIndex:enum]
 #define userTypeString(enum) [@[@"expert",@"parent",@"child",@"unknown"] objectAtIndex:enum];
@@ -15,6 +16,7 @@
 
 @property int score;
 @property PSRACTION opponentsLastChoice;
+@property (nonatomic, strong) PSRUser *gameUser;
 
 -(BOOL)playerWonBySubmitting:(PSRACTION) choice;
 
