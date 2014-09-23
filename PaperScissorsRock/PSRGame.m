@@ -10,32 +10,46 @@
 
 @implementation PSRGame
 
-
--(BOOL)playerWonBySubmitting:(PSRACTION) choice
+-(WINCONDITION)playerWonBySubmitting:(PSRACTION) choice
 {
     PSRACTION computerChoice = (PSRACTION) arc4random()%3;
     self.opponentsLastChoice = computerChoice;
-    BOOL playerDidWin = NO;
+    WINCONDITION outcome = (WINCONDITION) ((choice-computerChoice)+3)%3;
     
-    if(((choice-computerChoice)+3)%3 ==1)
+    if( outcome == WIN)
     {
-        self.score++;
-        playerDidWin = YES;
+        [self incrementWins];
+    }
+    if(outcome == LOSS)
+    {
+        [self incrementLosses];
     }
     
-    [self updatePlayerRecord:playerDidWin];
-    
-    return playerDidWin;
+    return outcome;
+}
+
+-(void)incrementWins
+{
+    self.gameUser.winCnt = self.gameUser.winCnt+1;
+    [self.gameUser save];
+    self.score = (int)self.gameUser.winCnt;
+}
+-(void)incrementLosses
+{
+    self.gameUser.lossCnt = self.gameUser.lossCnt+1;
+    [self.gameUser save];
+    self.score = (int)self.gameUser.winCnt;
 }
 
 - (void)updatePlayerRecord:(BOOL)playerDidWin
 {
-    if (playerDidWin) {
-        [PSRUser executeUpdateQuery:@"UPDATE $T SET winCnt = winCnt + 1 WHERE id = ?",self.gameUser.primaryKey];
-    } else {
-        [PSRUser executeUpdateQuery:@"UPDATE $T SET lossCnt = lossCnt + 1 WHERE id = ?",self.gameUser.primaryKey];
-    }
 }
 
+#pragma mark - Custom Setters
+-(void)setGameUser:(PSRUser *)gameUser
+{
+    _gameUser = gameUser;
+    self.score = (int)_gameUser.winCnt;
+}
 
 @end

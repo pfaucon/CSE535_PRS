@@ -134,7 +134,7 @@
         }
         else if (state == MCSessionStateNotConnected){
             if ([_arrConnectedDevices count] > 0) {
-                int indexOfPeer = [_arrConnectedDevices indexOfObject:peerDisplayName];
+                NSUInteger indexOfPeer = [_arrConnectedDevices indexOfObject:peerDisplayName];
                 [_arrConnectedDevices removeObjectAtIndex:indexOfPeer];
             }
         }

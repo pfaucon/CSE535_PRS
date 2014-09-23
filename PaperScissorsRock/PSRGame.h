@@ -10,7 +10,12 @@
 #import "PSRUser.h"
 
 #define PSRActionString(enum) [@[@"ROCK",@"PAPER",@"SCISSORS"] objectAtIndex:enum]
-#define userTypeString(enum) [@[@"expert",@"parent",@"child",@"unknown"] objectAtIndex:enum];
+
+typedef NS_ENUM(int, WINCONDITION) {
+    DRAW=0,
+    WIN =1,
+    LOSS=2
+};
 
 @interface PSRGame : NSObject
 
@@ -18,6 +23,6 @@
 @property PSRACTION opponentsLastChoice;
 @property (nonatomic, strong) PSRUser *gameUser;
 
--(BOOL)playerWonBySubmitting:(PSRACTION) choice;
+-(WINCONDITION)playerWonBySubmitting:(PSRACTION) choice;
 
 @end

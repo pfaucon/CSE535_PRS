@@ -66,7 +66,15 @@
 
 -(void)submitChoice:(PSRACTION) choice
 {
-    self.congratulationsLabel.hidden = ![self.game playerWonBySubmitting:choice];
+    WINCONDITION outcome = [self.game playerWonBySubmitting:choice];
+    if(outcome == WIN)
+    {
+        self.congratulationsLabel.hidden = NO;
+    }
+    else
+    {
+        self.congratulationsLabel.hidden = YES;
+    }
     
     self.opponentsChoiceLabel.text = [NSString stringWithFormat:@"The Computer Picked: %@", PSRActionString(self.game.opponentsLastChoice)];
     
