@@ -8,9 +8,11 @@
 
 #import "PSRGameViewController.h"
 #import "PSRGame.h"
+#import "MGlyphDetectorView.h"
 
 #define kGameTime 3
 #define kUpdateFrequency 60.0
+#define GESTURE_SCORE_THRESHOLD 0.7f
 
 @interface PSRGameViewController ()
 {
@@ -28,10 +30,16 @@
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *recordLabel;
 
+@property (strong, nonatomic) MGlyphDetectorView *gestureDetectorView;
+@property (strong, nonatomic) IBOutlet UILabel *lblStatus;
 @property PSRGame *game;
+
 @end
 
 @implementation PSRGameViewController
+
+@synthesize gestureDetectorView;
+@synthesize lblStatus;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -69,7 +77,31 @@
     self.motionManager = [[CMMotionManager alloc] init];
     self.motionManager.accelerometerUpdateInterval = 1.0 / kUpdateFrequency;
     /*** Accelerometer initialization ***/
+    
+    /*** Gesture initialization ***/
+    self.drawUI.layer.borderColor = [UIColor blueColor].CGColor;
+    self.drawUI.layer.borderWidth = 2;
+    self.drawUI.layer.cornerRadius = 10;
+    self.gestureDetectorView = [[MGlyphDetectorView alloc] initWithFrame:self.drawUI.bounds];
+    self.gestureDetectorView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.gestureDetectorView.delegate = self;
+    [self.gestureDetectorView loadTemplatesWithNames:@"R",@"P",@"S", nil];
+    [self.drawUI addSubview:self.gestureDetectorView];
+    /*** Gesture initialization ***/
 }
+
+////TODO
+//-(void)viewDidAppear:(BOOL)animated
+//{
+//    [super viewDidAppear:animated];
+//    
+//    NSString *glyphNames = [self.gestureDetectorView getGlyphNamesString];
+////    if([glyphNames length] > 0)
+////    {
+////        NSString *statusText = [NSString stringWithFormat:@"Loaded with %@ templates.\n\nStart drawing.", [self.gestureDetectorView getGlyphNamesString]];
+////        self.lblStatus.text = statusText;
+////    }
+//}
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -239,4 +271,56 @@
     [self.motionManager stopAccelerometerUpdates];
 }
 /*** Accelerometer functions ***/
+
+/*** Gesture functions ***/
+-(void)viewDidUnload
+{
+    [self.gestureDetectorView removeFromSuperview];
+    self.gestureDetectorView.delegate = nil;
+    self.gestureDetectorView = nil;
+    [super viewDidUnload];
+}
+
+-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return YES;
+}
+
+-(void)wtmGlyphDetectorView:(MGlyphDetectorView*)theView glyphDetected:(WTMGlyph *)glyph withScore:(float)score
+{
+    if (score < GESTURE_SCORE_THRESHOLD)
+        return;
+//    NSString *statusString = @"";
+    
+    //NSString *glyphNames = [self.gestureDetectorView getGlyphNamesString];
+    //if([glyphNames length] > 0)
+        //statusString = [statusString stringByAppendingFormat:@"Loaded 1`2with %@ templates.\n", glyphNames];
+    
+    //statusString = [statusString stringByAppendingFormat:@"Last gesture detected: %@\nScore: %.3f", glyph.name, score];
+    
+    if ([glyph.name isEqualToString:@"S"]) {
+        self.lblStatus.text = @"Scissor!";
+        [self submitChoice:SCISSORS];
+    }
+    else if ([glyph.name isEqualToString:@"R"])
+    {
+        self.lblStatus.text = @"Rock!";
+        [self submitChoice:ROCK];
+    }
+    else if ([glyph.name isEqualToString:@"P"])
+    {
+        self.lblStatus.text = @"Paper!";
+        [self submitChoice:PAPER];
+    }
+    
+    //self.lblStatus.text = glyph.name;
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+/*** Gesture functions ***/
+
 @end

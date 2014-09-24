@@ -53,6 +53,29 @@
 		DD8219D819CE355B004E96BE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE046FF919CA36DD00AE0B9E /* CoreGraphics.framework */; };
 		DD8219D919CE355B004E96BE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE046FFB19CA36DD00AE0B9E /* UIKit.framework */; };
 		EE1EB97D141545508D606293 /* libPods-PaperScissorsRock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4BF69D1985408F88A877A8 /* libPods-PaperScissorsRock.a */; };
+		FA87801B19D29D0A00BFA081 /* MGlyphDetectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA87801A19D29D0A00BFA081 /* MGlyphDetectorView.m */; };
+		FA87804719D29D3800BFA081 /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = FA87801E19D29D3800BFA081 /* CDataScanner.m */; };
+		FA87804819D29D3800BFA081 /* CFilteringJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = FA87802119D29D3800BFA081 /* CFilteringJSONSerializer.m */; };
+		FA87804919D29D3800BFA081 /* CJSONDeserializer_BlocksExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = FA87802319D29D3800BFA081 /* CJSONDeserializer_BlocksExtensions.m */; };
+		FA87804A19D29D3800BFA081 /* CJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = FA87802519D29D3800BFA081 /* CJSONSerialization.m */; };
+		FA87804B19D29D3800BFA081 /* CJSONSerializedData.m in Sources */ = {isa = PBXBuildFile; fileRef = FA87802719D29D3800BFA081 /* CJSONSerializedData.m */; };
+		FA87804C19D29D3800BFA081 /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = FA87802A19D29D3800BFA081 /* CDataScanner_Extensions.m */; };
+		FA87804D19D29D3800BFA081 /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = FA87802C19D29D3800BFA081 /* NSDictionary_JSONExtensions.m */; };
+		FA87804E19D29D3800BFA081 /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = FA87802F19D29D3800BFA081 /* CJSONDeserializer.m */; };
+		FA87804F19D29D3800BFA081 /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = FA87803119D29D3800BFA081 /* CJSONScanner.m */; };
+		FA87805019D29D3800BFA081 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = FA87803319D29D3800BFA081 /* CJSONSerializer.m */; };
+		FA87805119D29D3800BFA081 /* ndollar.js in Sources */ = {isa = PBXBuildFile; fileRef = FA87803519D29D3800BFA081 /* ndollar.js */; };
+		FA87805219D29D3800BFA081 /* protractor-chi2010.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FA87803619D29D3800BFA081 /* protractor-chi2010.pdf */; };
+		FA87805319D29D3800BFA081 /* WTMDetectionResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FA87803819D29D3800BFA081 /* WTMDetectionResult.m */; };
+		FA87805419D29D3800BFA081 /* WTMGlyph.m in Sources */ = {isa = PBXBuildFile; fileRef = FA87803B19D29D3800BFA081 /* WTMGlyph.m */; };
+		FA87805519D29D3800BFA081 /* WTMGlyphDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = FA87803D19D29D3800BFA081 /* WTMGlyphDefaults.m */; };
+		FA87805619D29D3800BFA081 /* WTMGlyphDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = FA87804019D29D3800BFA081 /* WTMGlyphDetector.m */; };
+		FA87805719D29D3800BFA081 /* WTMGlyphStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = FA87804219D29D3800BFA081 /* WTMGlyphStroke.m */; };
+		FA87805819D29D3800BFA081 /* WTMGlyphTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA87804419D29D3800BFA081 /* WTMGlyphTemplate.m */; };
+		FA87805919D29D3800BFA081 /* WTMGlyphUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = FA87804619D29D3800BFA081 /* WTMGlyphUtilities.m */; };
+		FA87808819D29D5300BFA081 /* P.json in Resources */ = {isa = PBXBuildFile; fileRef = FA87806B19D29D5300BFA081 /* P.json */; };
+		FA87808A19D29D5300BFA081 /* R.json in Resources */ = {isa = PBXBuildFile; fileRef = FA87806D19D29D5300BFA081 /* R.json */; };
+		FA87808B19D29D5300BFA081 /* S.json in Resources */ = {isa = PBXBuildFile; fileRef = FA87806E19D29D5300BFA081 /* S.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +136,50 @@
 		DD8219BD19CE31B0004E96BE /* PSRUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRUser.m; sourceTree = "<group>"; };
 		DD8219BF19CE32E1004E96BE /* PSRConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRConstants.h; sourceTree = "<group>"; };
 		DD8219C019CE32E1004E96BE /* PSRConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRConstants.m; sourceTree = "<group>"; };
+		FA87801919D29D0A00BFA081 /* MGlyphDetectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGlyphDetectorView.h; path = ../MGlyphDetectorView.h; sourceTree = "<group>"; };
+		FA87801A19D29D0A00BFA081 /* MGlyphDetectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGlyphDetectorView.m; path = ../MGlyphDetectorView.m; sourceTree = "<group>"; };
+		FA87801D19D29D3800BFA081 /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
+		FA87801E19D29D3800BFA081 /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner.m; sourceTree = "<group>"; };
+		FA87802019D29D3800BFA081 /* CFilteringJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFilteringJSONSerializer.h; sourceTree = "<group>"; };
+		FA87802119D29D3800BFA081 /* CFilteringJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFilteringJSONSerializer.m; sourceTree = "<group>"; };
+		FA87802219D29D3800BFA081 /* CJSONDeserializer_BlocksExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer_BlocksExtensions.h; sourceTree = "<group>"; };
+		FA87802319D29D3800BFA081 /* CJSONDeserializer_BlocksExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer_BlocksExtensions.m; sourceTree = "<group>"; };
+		FA87802419D29D3800BFA081 /* CJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerialization.h; sourceTree = "<group>"; };
+		FA87802519D29D3800BFA081 /* CJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerialization.m; sourceTree = "<group>"; };
+		FA87802619D29D3800BFA081 /* CJSONSerializedData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializedData.h; sourceTree = "<group>"; };
+		FA87802719D29D3800BFA081 /* CJSONSerializedData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializedData.m; sourceTree = "<group>"; };
+		FA87802919D29D3800BFA081 /* CDataScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner_Extensions.h; sourceTree = "<group>"; };
+		FA87802A19D29D3800BFA081 /* CDataScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner_Extensions.m; sourceTree = "<group>"; };
+		FA87802B19D29D3800BFA081 /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
+		FA87802C19D29D3800BFA081 /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
+		FA87802E19D29D3800BFA081 /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
+		FA87802F19D29D3800BFA081 /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
+		FA87803019D29D3800BFA081 /* CJSONScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONScanner.h; sourceTree = "<group>"; };
+		FA87803119D29D3800BFA081 /* CJSONScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONScanner.m; sourceTree = "<group>"; };
+		FA87803219D29D3800BFA081 /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
+		FA87803319D29D3800BFA081 /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
+		FA87803419D29D3800BFA081 /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
+		FA87803519D29D3800BFA081 /* ndollar.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ndollar.js; sourceTree = "<group>"; };
+		FA87803619D29D3800BFA081 /* protractor-chi2010.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "protractor-chi2010.pdf"; sourceTree = "<group>"; };
+		FA87803719D29D3800BFA081 /* WTMDetectionResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMDetectionResult.h; sourceTree = "<group>"; };
+		FA87803819D29D3800BFA081 /* WTMDetectionResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMDetectionResult.m; sourceTree = "<group>"; };
+		FA87803919D29D3800BFA081 /* WTMGlyph-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WTMGlyph-Prefix.pch"; sourceTree = "<group>"; };
+		FA87803A19D29D3800BFA081 /* WTMGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMGlyph.h; sourceTree = "<group>"; };
+		FA87803B19D29D3800BFA081 /* WTMGlyph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMGlyph.m; sourceTree = "<group>"; };
+		FA87803C19D29D3800BFA081 /* WTMGlyphDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMGlyphDefaults.h; sourceTree = "<group>"; };
+		FA87803D19D29D3800BFA081 /* WTMGlyphDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMGlyphDefaults.m; sourceTree = "<group>"; };
+		FA87803E19D29D3800BFA081 /* WTMGlyphDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMGlyphDelegate.h; sourceTree = "<group>"; };
+		FA87803F19D29D3800BFA081 /* WTMGlyphDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMGlyphDetector.h; sourceTree = "<group>"; };
+		FA87804019D29D3800BFA081 /* WTMGlyphDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMGlyphDetector.m; sourceTree = "<group>"; };
+		FA87804119D29D3800BFA081 /* WTMGlyphStroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMGlyphStroke.h; sourceTree = "<group>"; };
+		FA87804219D29D3800BFA081 /* WTMGlyphStroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMGlyphStroke.m; sourceTree = "<group>"; };
+		FA87804319D29D3800BFA081 /* WTMGlyphTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMGlyphTemplate.h; sourceTree = "<group>"; };
+		FA87804419D29D3800BFA081 /* WTMGlyphTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMGlyphTemplate.m; sourceTree = "<group>"; };
+		FA87804519D29D3800BFA081 /* WTMGlyphUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMGlyphUtilities.h; sourceTree = "<group>"; };
+		FA87804619D29D3800BFA081 /* WTMGlyphUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMGlyphUtilities.m; sourceTree = "<group>"; };
+		FA87806B19D29D5300BFA081 /* P.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = P.json; sourceTree = "<group>"; };
+		FA87806D19D29D5300BFA081 /* R.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = R.json; sourceTree = "<group>"; };
+		FA87806E19D29D5300BFA081 /* S.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = S.json; sourceTree = "<group>"; };
 		FF4BF69D1985408F88A877A8 /* libPods-PaperScissorsRock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PaperScissorsRock.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -165,6 +232,8 @@
 		CE046FEB19CA36DD00AE0B9E = {
 			isa = PBXGroup;
 			children = (
+				FA87805A19D29D5300BFA081 /* gestures */,
+				FA87801C19D29D3800BFA081 /* WTMGlyph */,
 				CE046FFD19CA36DD00AE0B9E /* PaperScissorsRock */,
 				CE04701C19CA36DD00AE0B9E /* PaperScissorsRockTests */,
 				CE046FF619CA36DD00AE0B9E /* Frameworks */,
@@ -208,6 +277,8 @@
 			isa = PBXGroup;
 			children = (
 				CE04704019CA562E00AE0B9E /* Mesh Networking */,
+				FA87801919D29D0A00BFA081 /* MGlyphDetectorView.h */,
+				FA87801A19D29D0A00BFA081 /* MGlyphDetectorView.m */,
 				CE04700619CA36DD00AE0B9E /* PSRAppDelegate.h */,
 				CE04700719CA36DD00AE0B9E /* PSRAppDelegate.m */,
 				CE04700919CA36DD00AE0B9E /* Main.storyboard */,
@@ -278,6 +349,86 @@
 				CE04704519CA57F300AE0B9E /* ConnectionsViewController.m */,
 			);
 			name = "phase 2 sources";
+			sourceTree = "<group>";
+		};
+		FA87801C19D29D3800BFA081 /* WTMGlyph */ = {
+			isa = PBXGroup;
+			children = (
+				FA87801D19D29D3800BFA081 /* CDataScanner.h */,
+				FA87801E19D29D3800BFA081 /* CDataScanner.m */,
+				FA87801F19D29D3800BFA081 /* Experimental */,
+				FA87802819D29D3800BFA081 /* Extensions */,
+				FA87802D19D29D3800BFA081 /* JSON */,
+				FA87803519D29D3800BFA081 /* ndollar.js */,
+				FA87803619D29D3800BFA081 /* protractor-chi2010.pdf */,
+				FA87803719D29D3800BFA081 /* WTMDetectionResult.h */,
+				FA87803819D29D3800BFA081 /* WTMDetectionResult.m */,
+				FA87803919D29D3800BFA081 /* WTMGlyph-Prefix.pch */,
+				FA87803A19D29D3800BFA081 /* WTMGlyph.h */,
+				FA87803B19D29D3800BFA081 /* WTMGlyph.m */,
+				FA87803C19D29D3800BFA081 /* WTMGlyphDefaults.h */,
+				FA87803D19D29D3800BFA081 /* WTMGlyphDefaults.m */,
+				FA87803E19D29D3800BFA081 /* WTMGlyphDelegate.h */,
+				FA87803F19D29D3800BFA081 /* WTMGlyphDetector.h */,
+				FA87804019D29D3800BFA081 /* WTMGlyphDetector.m */,
+				FA87804119D29D3800BFA081 /* WTMGlyphStroke.h */,
+				FA87804219D29D3800BFA081 /* WTMGlyphStroke.m */,
+				FA87804319D29D3800BFA081 /* WTMGlyphTemplate.h */,
+				FA87804419D29D3800BFA081 /* WTMGlyphTemplate.m */,
+				FA87804519D29D3800BFA081 /* WTMGlyphUtilities.h */,
+				FA87804619D29D3800BFA081 /* WTMGlyphUtilities.m */,
+			);
+			path = WTMGlyph;
+			sourceTree = "<group>";
+		};
+		FA87801F19D29D3800BFA081 /* Experimental */ = {
+			isa = PBXGroup;
+			children = (
+				FA87802019D29D3800BFA081 /* CFilteringJSONSerializer.h */,
+				FA87802119D29D3800BFA081 /* CFilteringJSONSerializer.m */,
+				FA87802219D29D3800BFA081 /* CJSONDeserializer_BlocksExtensions.h */,
+				FA87802319D29D3800BFA081 /* CJSONDeserializer_BlocksExtensions.m */,
+				FA87802419D29D3800BFA081 /* CJSONSerialization.h */,
+				FA87802519D29D3800BFA081 /* CJSONSerialization.m */,
+				FA87802619D29D3800BFA081 /* CJSONSerializedData.h */,
+				FA87802719D29D3800BFA081 /* CJSONSerializedData.m */,
+			);
+			path = Experimental;
+			sourceTree = "<group>";
+		};
+		FA87802819D29D3800BFA081 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA87802919D29D3800BFA081 /* CDataScanner_Extensions.h */,
+				FA87802A19D29D3800BFA081 /* CDataScanner_Extensions.m */,
+				FA87802B19D29D3800BFA081 /* NSDictionary_JSONExtensions.h */,
+				FA87802C19D29D3800BFA081 /* NSDictionary_JSONExtensions.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA87802D19D29D3800BFA081 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				FA87802E19D29D3800BFA081 /* CJSONDeserializer.h */,
+				FA87802F19D29D3800BFA081 /* CJSONDeserializer.m */,
+				FA87803019D29D3800BFA081 /* CJSONScanner.h */,
+				FA87803119D29D3800BFA081 /* CJSONScanner.m */,
+				FA87803219D29D3800BFA081 /* CJSONSerializer.h */,
+				FA87803319D29D3800BFA081 /* CJSONSerializer.m */,
+				FA87803419D29D3800BFA081 /* JSONRepresentation.h */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		FA87805A19D29D5300BFA081 /* gestures */ = {
+			isa = PBXGroup;
+			children = (
+				FA87806B19D29D5300BFA081 /* P.json */,
+				FA87806D19D29D5300BFA081 /* R.json */,
+				FA87806E19D29D5300BFA081 /* S.json */,
+			);
+			path = gestures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,8 +510,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA87808A19D29D5300BFA081 /* R.json in Resources */,
 				5208C45519D283F5002413C5 /* PAPER.png in Resources */,
+				FA87805219D29D3800BFA081 /* protractor-chi2010.pdf in Resources */,
 				CE04701019CA36DD00AE0B9E /* Images.xcassets in Resources */,
+				FA87808B19D29D5300BFA081 /* S.json in Resources */,
+				FA87808819D29D5300BFA081 /* P.json in Resources */,
 				5208C45619D283F5002413C5 /* ROCK.png in Resources */,
 				CE04700219CA36DD00AE0B9E /* InfoPlist.strings in Resources */,
 				5208C45719D283F5002413C5 /* SCISSORS.png in Resources */,
@@ -416,16 +571,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA87805519D29D3800BFA081 /* WTMGlyphDefaults.m in Sources */,
 				CE04704A19CA812A00AE0B9E /* PSRLandingViewController.m in Sources */,
+				FA87805119D29D3800BFA081 /* ndollar.js in Sources */,
 				DD8219BE19CE31B0004E96BE /* PSRUser.m in Sources */,
+				FA87804C19D29D3800BFA081 /* CDataScanner_Extensions.m in Sources */,
 				CE04704D19CA850700AE0B9E /* PSRGameViewController.m in Sources */,
+				FA87805719D29D3800BFA081 /* WTMGlyphStroke.m in Sources */,
+				FA87804F19D29D3800BFA081 /* CJSONScanner.m in Sources */,
+				FA87804B19D29D3800BFA081 /* CJSONSerializedData.m in Sources */,
+				FA87801B19D29D0A00BFA081 /* MGlyphDetectorView.m in Sources */,
+				FA87805619D29D3800BFA081 /* WTMGlyphDetector.m in Sources */,
+				FA87804819D29D3800BFA081 /* CFilteringJSONSerializer.m in Sources */,
+				FA87805419D29D3800BFA081 /* WTMGlyph.m in Sources */,
+				FA87805819D29D3800BFA081 /* WTMGlyphTemplate.m in Sources */,
 				CE04704619CA57F300AE0B9E /* ConnectionsViewController.m in Sources */,
 				CE04705019CA857C00AE0B9E /* PSRGame.m in Sources */,
 				DD8219C119CE32E1004E96BE /* PSRConstants.m in Sources */,
+				FA87804D19D29D3800BFA081 /* NSDictionary_JSONExtensions.m in Sources */,
+				FA87805019D29D3800BFA081 /* CJSONSerializer.m in Sources */,
 				CE04700E19CA36DD00AE0B9E /* PSRViewController.m in Sources */,
+				FA87804A19D29D3800BFA081 /* CJSONSerialization.m in Sources */,
+				FA87804719D29D3800BFA081 /* CDataScanner.m in Sources */,
 				CE04704319CA563F00AE0B9E /* MCManager.m in Sources */,
 				CE04700819CA36DD00AE0B9E /* PSRAppDelegate.m in Sources */,
+				FA87804919D29D3800BFA081 /* CJSONDeserializer_BlocksExtensions.m in Sources */,
+				FA87805319D29D3800BFA081 /* WTMDetectionResult.m in Sources */,
+				FA87805919D29D3800BFA081 /* WTMGlyphUtilities.m in Sources */,
 				CE04700419CA36DD00AE0B9E /* main.m in Sources */,
+				FA87804E19D29D3800BFA081 /* CJSONDeserializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

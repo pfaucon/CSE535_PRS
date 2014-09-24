@@ -37,4 +37,7 @@
 - (IBAction)startAccelerometerPlay:(id)sender;
 /*** Accelerometer data ***/
 
+//Drawing data
+@property (strong, nonatomic) IBOutlet UIView *drawUI;
+
 @end
