@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rwh-0G-xWG">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -328,6 +329,30 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meE-LW-oSO">
+                                <rect key="frame" x="16" y="151" width="173" height="30"/>
+                                <state key="normal" title="Play using accelerometer">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startAccelerometerPlay:" destination="8B2-4k-fYh" eventType="touchUpInside" id="ser-Oi-BR6"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2jI-qo-QRR">
+                                <rect key="frame" x="120" y="259" width="80" height="80"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time left to choose:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89e-77-IiE">
+                                <rect key="frame" x="0.0" y="490" width="152" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdT-D2-MyO">
+                                <rect key="frame" x="160" y="490" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -337,6 +362,9 @@
                         <outlet property="opponentsChoiceLabel" destination="ikn-e5-xo6" id="CjK-E5-UqA"/>
                         <outlet property="recordLabel" destination="2MC-Dx-N2D" id="aFQ-gl-dGJ"/>
                         <outlet property="scoreLabel" destination="hvQ-Ze-msQ" id="0NS-IQ-EB7"/>
+                        <outlet property="startAccelerometerPlayButton" destination="meE-LW-oSO" id="Hpg-qh-4B6"/>
+                        <outlet property="timeLabel" destination="KdT-D2-MyO" id="Uje-ya-6mt"/>
+                        <outlet property="userSelectionImageView" destination="2jI-qo-QRR" id="ypa-Jc-na5"/>
                         <outlet property="usernameLabel" destination="M7c-NN-3Eo" id="Dsf-Ra-GIL"/>
                     </connections>
                 </viewController>

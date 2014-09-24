@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5208C45519D283F5002413C5 /* PAPER.png in Resources */ = {isa = PBXBuildFile; fileRef = 5208C45219D283F5002413C5 /* PAPER.png */; };
+		5208C45619D283F5002413C5 /* ROCK.png in Resources */ = {isa = PBXBuildFile; fileRef = 5208C45319D283F5002413C5 /* ROCK.png */; };
+		5208C45719D283F5002413C5 /* SCISSORS.png in Resources */ = {isa = PBXBuildFile; fileRef = 5208C45419D283F5002413C5 /* SCISSORS.png */; };
 		CE046FF819CA36DD00AE0B9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE046FF719CA36DD00AE0B9E /* Foundation.framework */; };
 		CE046FFA19CA36DD00AE0B9E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE046FF919CA36DD00AE0B9E /* CoreGraphics.framework */; };
 		CE046FFC19CA36DD00AE0B9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE046FFB19CA36DD00AE0B9E /* UIKit.framework */; };
@@ -63,6 +66,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5208C45219D283F5002413C5 /* PAPER.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PAPER.png; sourceTree = "<group>"; };
+		5208C45319D283F5002413C5 /* ROCK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ROCK.png; sourceTree = "<group>"; };
+		5208C45419D283F5002413C5 /* SCISSORS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SCISSORS.png; sourceTree = "<group>"; };
 		BC33806F4CDB47579E20341E /* Pods-PaperScissorsRock.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperScissorsRock.xcconfig"; path = "Pods/Pods-PaperScissorsRock.xcconfig"; sourceTree = "<group>"; };
 		CE046FF419CA36DD00AE0B9E /* PaperScissorsRock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperScissorsRock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE046FF719CA36DD00AE0B9E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -225,6 +231,9 @@
 		CE046FFE19CA36DD00AE0B9E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5208C45219D283F5002413C5 /* PAPER.png */,
+				5208C45319D283F5002413C5 /* ROCK.png */,
+				5208C45419D283F5002413C5 /* SCISSORS.png */,
 				CE046FFF19CA36DD00AE0B9E /* PaperScissorsRock-Info.plist */,
 				CE04700019CA36DD00AE0B9E /* InfoPlist.strings */,
 				CE04700319CA36DD00AE0B9E /* main.m */,
@@ -321,9 +330,6 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Team Roflcopter";
 				TargetAttributes = {
-					CE046FF319CA36DD00AE0B9E = {
-						DevelopmentTeam = H276N72W5Y;
-					};
 					CE04701419CA36DD00AE0B9E = {
 						TestTargetID = CE046FF319CA36DD00AE0B9E;
 					};
@@ -353,8 +359,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5208C45519D283F5002413C5 /* PAPER.png in Resources */,
 				CE04701019CA36DD00AE0B9E /* Images.xcassets in Resources */,
+				5208C45619D283F5002413C5 /* ROCK.png in Resources */,
 				CE04700219CA36DD00AE0B9E /* InfoPlist.strings in Resources */,
+				5208C45719D283F5002413C5 /* SCISSORS.png in Resources */,
 				CE04700B19CA36DD00AE0B9E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
