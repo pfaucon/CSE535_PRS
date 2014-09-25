@@ -43,7 +43,7 @@
 {
     self.glyphDetector = [WTMGlyphDetector detector];
     self.glyphDetector.delegate = self;
-    self.glyphDetector.timeoutSeconds = 1;
+    self.glyphDetector.timeoutSeconds = .1;
     
     if(self.glyphNamesArray == nil)
         self.glyphNamesArray = [[NSMutableArray alloc] init];
