@@ -43,7 +43,7 @@
 }
 
 - (IBAction)gameOn:(id)sender {
-    self.gameUser = [PSRUser firstInstanceWhere:@"username = ? ORDER BY id LIMIT 1", self.loginUsernameField.text];
+    self.gameUser = [PSRUser firstInstanceWhere:@"username = ? ORDER BY id LIMIT 1", [self.loginUsernameField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
     
     if (self.gameUser) {
         [self performSegueWithIdentifier:@"segueToGame" sender:self];
@@ -54,7 +54,7 @@
 
 - (IBAction)signUpPressed:(id)sender {
     PSRUser *newUser = [PSRUser new];
-    newUser.username = self.signupUsernameTextField.text;
+    newUser.username = [self.signupUsernameTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     newUser.age = [self.ageTextField.text integerValue];
     newUser.gender  = self.genderSegmentedControl.selectedSegmentIndex;
     
