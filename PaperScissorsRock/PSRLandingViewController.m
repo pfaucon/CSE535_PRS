@@ -107,5 +107,31 @@
     dest.gameUser = self.gameUser;
 }
 
+#pragma mark - Mail Delegation
+
+- (IBAction)emailPlayerDB:(id)sender {
+    if ([MFMailComposeViewController canSendMail]) {
+        
+        MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
+        mailViewController.mailComposeDelegate = self;
+        [mailViewController setSubject:@"Export of PS Rocks database"];
+        [mailViewController setMessageBody:@"The data is formatted as a sqlite db." isHTML:NO];
+        
+        
+        NSString *dbPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:@"psr.sqlite3"];
+        NSData   *myData = [NSData dataWithContentsOfFile:dbPath];
+        [mailViewController addAttachmentData:myData mimeType:@"application/x-sqlite3" fileName:@"PSR.db"];
+        
+        [self presentViewController:mailViewController animated:YES completion:Nil];
+    }
+    
+    else {
+        NSLog(@"Device is unable to send email in its current state.");
+    }
+}
+
+-(void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
+    [self dismissViewControllerAnimated:YES completion:Nil];
+}
 
 @end

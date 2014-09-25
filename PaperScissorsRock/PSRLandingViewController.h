@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "PSRGameViewController.h"
+@import MessageUI;
 
-@interface PSRLandingViewController : UIViewController <UITextFieldDelegate>
+@interface PSRLandingViewController : UIViewController <UITextFieldDelegate,MFMailComposeViewControllerDelegate>
 
 @end
