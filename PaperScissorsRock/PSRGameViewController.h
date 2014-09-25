@@ -31,6 +31,7 @@
 @property (strong, nonatomic) CMMotionManager *motionManager;
 
 @property (strong, nonatomic) IBOutlet UILabel *timeLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *opponentsSelectionImageView;
 @property (strong, nonatomic) IBOutlet UIImageView *userSelectionImageView;
 @property (strong, nonatomic) IBOutlet UIButton *startAccelerometerPlayButton;
 

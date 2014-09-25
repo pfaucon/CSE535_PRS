@@ -24,8 +24,6 @@
     double z;
 }
 
-@property (weak, nonatomic) IBOutlet UILabel *opponentsChoiceLabel;
-@property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UILabel *congratulationsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *recordLabel;
@@ -55,8 +53,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.opponentsChoiceLabel.text = @"";
-    self.scoreLabel.text = @"";
     self.congratulationsLabel.hidden = YES;
     self.game = [PSRGame new];
     self.game.gameUser = self.gameUser;
@@ -82,6 +78,7 @@
     self.drawUI.layer.borderColor = [UIColor blueColor].CGColor;
     self.drawUI.layer.borderWidth = 2;
     self.drawUI.layer.cornerRadius = 10;
+    self.drawUI.layer.masksToBounds = YES;
     self.gestureDetectorView = [[MGlyphDetectorView alloc] initWithFrame:self.drawUI.bounds];
     self.gestureDetectorView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.gestureDetectorView.delegate = self;
@@ -138,9 +135,7 @@
         self.congratulationsLabel.hidden = YES;
     }
     
-    self.opponentsChoiceLabel.text = [NSString stringWithFormat:@"The Computer Picked: %@", PSRActionString(self.game.opponentsLastChoice)];
-    
-    self.scoreLabel.text = [NSString stringWithFormat:@"%d", self.game.score];
+    self.opponentsSelectionImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@ Black.png", PSRActionString(self.game.opponentsLastChoice)]];
     
     [self updateRecordLabel];
 }
@@ -148,10 +143,11 @@
 /*** Accelerometer functions ***/
 - (IBAction)startAccelerometerPlay:(id)sender {
     self.congratulationsLabel.hidden = YES;
-    self.opponentsChoiceLabel.text = @"";
+    
     
     [self.startAccelerometerPlayButton setTitle:@"Restart" forState:UIControlStateNormal];
     self.userSelectionImageView.image = nil;
+    self.opponentsSelectionImageView.image = nil;
     
     currSec = kGameTime;
     self.currentMaxAccelX = 0;
@@ -299,17 +295,14 @@
     //statusString = [statusString stringByAppendingFormat:@"Last gesture detected: %@\nScore: %.3f", glyph.name, score];
     
     if ([glyph.name isEqualToString:@"S"]) {
-        self.lblStatus.text = @"Scissor!";
         [self submitChoice:SCISSORS];
     }
     else if ([glyph.name isEqualToString:@"R"])
     {
-        self.lblStatus.text = @"Rock!";
         [self submitChoice:ROCK];
     }
     else if ([glyph.name isEqualToString:@"P"])
     {
-        self.lblStatus.text = @"Paper!";
         [self submitChoice:PAPER];
     }
     

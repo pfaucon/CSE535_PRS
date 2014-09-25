@@ -10,6 +10,9 @@
 		5208C45519D283F5002413C5 /* PAPER.png in Resources */ = {isa = PBXBuildFile; fileRef = 5208C45219D283F5002413C5 /* PAPER.png */; };
 		5208C45619D283F5002413C5 /* ROCK.png in Resources */ = {isa = PBXBuildFile; fileRef = 5208C45319D283F5002413C5 /* ROCK.png */; };
 		5208C45719D283F5002413C5 /* SCISSORS.png in Resources */ = {isa = PBXBuildFile; fileRef = 5208C45419D283F5002413C5 /* SCISSORS.png */; };
+		5209845C19D3CB160002F11F /* ROCK Black.png in Resources */ = {isa = PBXBuildFile; fileRef = 5209845919D3CB160002F11F /* ROCK Black.png */; };
+		5209845D19D3CB160002F11F /* PAPER Black.png in Resources */ = {isa = PBXBuildFile; fileRef = 5209845A19D3CB160002F11F /* PAPER Black.png */; };
+		5209845E19D3CB160002F11F /* SCISSORS Black.png in Resources */ = {isa = PBXBuildFile; fileRef = 5209845B19D3CB160002F11F /* SCISSORS Black.png */; };
 		CE046FF819CA36DD00AE0B9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE046FF719CA36DD00AE0B9E /* Foundation.framework */; };
 		CE046FFA19CA36DD00AE0B9E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE046FF919CA36DD00AE0B9E /* CoreGraphics.framework */; };
 		CE046FFC19CA36DD00AE0B9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE046FFB19CA36DD00AE0B9E /* UIKit.framework */; };
@@ -94,6 +97,9 @@
 		5208C45219D283F5002413C5 /* PAPER.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PAPER.png; sourceTree = "<group>"; };
 		5208C45319D283F5002413C5 /* ROCK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ROCK.png; sourceTree = "<group>"; };
 		5208C45419D283F5002413C5 /* SCISSORS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SCISSORS.png; sourceTree = "<group>"; };
+		5209845919D3CB160002F11F /* ROCK Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ROCK Black.png"; sourceTree = "<group>"; };
+		5209845A19D3CB160002F11F /* PAPER Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PAPER Black.png"; sourceTree = "<group>"; };
+		5209845B19D3CB160002F11F /* SCISSORS Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SCISSORS Black.png"; sourceTree = "<group>"; };
 		BC33806F4CDB47579E20341E /* Pods-PaperScissorsRock.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperScissorsRock.xcconfig"; path = "Pods/Pods-PaperScissorsRock.xcconfig"; sourceTree = "<group>"; };
 		CE046FF419CA36DD00AE0B9E /* PaperScissorsRock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperScissorsRock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE046FF719CA36DD00AE0B9E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -306,6 +312,9 @@
 		CE046FFE19CA36DD00AE0B9E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5209845919D3CB160002F11F /* ROCK Black.png */,
+				5209845A19D3CB160002F11F /* PAPER Black.png */,
+				5209845B19D3CB160002F11F /* SCISSORS Black.png */,
 				5208C45219D283F5002413C5 /* PAPER.png */,
 				5208C45319D283F5002413C5 /* ROCK.png */,
 				5208C45419D283F5002413C5 /* SCISSORS.png */,
@@ -519,9 +528,12 @@
 				FA87808A19D29D5300BFA081 /* R.json in Resources */,
 				5208C45519D283F5002413C5 /* PAPER.png in Resources */,
 				CE1176C719D3A13500293617 /* LH.json in Resources */,
+				5209845E19D3CB160002F11F /* SCISSORS Black.png in Resources */,
 				FA87805219D29D3800BFA081 /* protractor-chi2010.pdf in Resources */,
 				CE04701019CA36DD00AE0B9E /* Images.xcassets in Resources */,
+				5209845D19D3CB160002F11F /* PAPER Black.png in Resources */,
 				FA87808B19D29D5300BFA081 /* S.json in Resources */,
+				5209845C19D3CB160002F11F /* ROCK Black.png in Resources */,
 				FA87808819D29D5300BFA081 /* P.json in Resources */,
 				CE1176C319D3A03F00293617 /* LV.json in Resources */,
 				5208C45619D283F5002413C5 /* ROCK.png in Resources */,
@@ -742,6 +754,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PaperScissorsRock/PaperScissorsRock-Prefix.pch";
 				INFOPLIST_FILE = "PaperScissorsRock/PaperScissorsRock-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -763,6 +776,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PaperScissorsRock/PaperScissorsRock-Prefix.pch";
 				INFOPLIST_FILE = "PaperScissorsRock/PaperScissorsRock-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
