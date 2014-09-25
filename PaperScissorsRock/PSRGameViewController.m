@@ -12,7 +12,7 @@
 
 #define kGameTime 3
 #define kUpdateFrequency 60.0
-#define GESTURE_SCORE_THRESHOLD 0.7f
+#define GESTURE_SCORE_THRESHOLD 1.2f
 
 @interface PSRGameViewController ()
 {
@@ -75,7 +75,7 @@
     z = 0;
     
     self.motionManager = [[CMMotionManager alloc] init];
-    self.motionManager.accelerometerUpdateInterval = 1.0 / kUpdateFrequency;
+    self.motionManager.accelerometerUpdateInterval = .1 / kUpdateFrequency;
     /*** Accelerometer initialization ***/
     
     /*** Gesture initialization ***/
@@ -85,7 +85,7 @@
     self.gestureDetectorView = [[MGlyphDetectorView alloc] initWithFrame:self.drawUI.bounds];
     self.gestureDetectorView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.gestureDetectorView.delegate = self;
-    [self.gestureDetectorView loadTemplatesWithNames:@"R",@"P",@"S", nil];
+    [self.gestureDetectorView loadTemplatesWithNames:@"R",@"P",@"S",@"LV",@"LH", nil];
     [self.drawUI addSubview:self.gestureDetectorView];
     /*** Gesture initialization ***/
 }
@@ -112,7 +112,7 @@
 
 - (void)updateRecordLabel
 {
-    self.recordLabel.text = [NSString stringWithFormat:@"Record: %ldW - %ldL",self.gameUser.winCnt, self.gameUser.lossCnt];
+    self.recordLabel.text = [NSString stringWithFormat:@"Record: %ldW - %ldL",(unsigned long)self.gameUser.winCnt, (unsigned long)self.gameUser.lossCnt];
 }
 
 - (IBAction)chooseRock:(id)sender {
