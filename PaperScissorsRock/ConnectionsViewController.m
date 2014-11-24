@@ -100,7 +100,7 @@
 
 
 - (IBAction)disconnect:(id)sender {
-    [_appDelegate.mcManager.session disconnect];
+    [_appDelegate.mcManager disableMeshNetworking];
     
     _txtName.enabled = YES;
     

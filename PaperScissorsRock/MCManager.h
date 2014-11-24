@@ -19,6 +19,8 @@
 -(void)setupPeerAndSessionWithDisplayName:(NSString *)displayName;
 -(void)setupMCBrowser;
 -(void)advertiseSelf:(BOOL)shouldAdvertise;
+-(void)disableAdvertising;
+-(void)disableMeshNetworking;
 
 @end
 

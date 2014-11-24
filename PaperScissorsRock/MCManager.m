@@ -56,6 +56,15 @@
     }
 }
 
+-(void)disableAdvertising
+{
+    [self advertiseSelf:NO];
+}
+-(void)disableMeshNetworking
+{
+    [self disableAdvertising];
+    [_session disconnect];
+}
 
 #pragma mark - MCSession Delegate method implementation
 

@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self.appDelegate.mcManager.session disconnect];
+    [self.appDelegate.mcManager disableMeshNetworking];
     
     self.appDelegate = (PSRAppDelegate *)[[UIApplication sharedApplication] delegate];
     [self.appDelegate.mcManager setupPeerAndSessionWithDisplayName:self.gameUser.username];

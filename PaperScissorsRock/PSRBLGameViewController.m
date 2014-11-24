@@ -382,7 +382,7 @@
 }
 
 - (IBAction)disconnect:(id)sender {
-    [self.appDelegate.mcManager.session disconnect];
+    [self.appDelegate.mcManager disableMeshNetworking];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
