@@ -24,5 +24,6 @@ typedef NS_ENUM(int, WINCONDITION) {
 @property (nonatomic, strong) PSRUser *gameUser;
 
 -(WINCONDITION)playerWonBySubmitting:(PSRACTION) choice;
+-(WINCONDITION)bluetoothPlayPlayerOneChoice:(PSRACTION) playerOneChoice playerTwoChoice:(PSRACTION) playerTwoChoice;
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "MCManager.h"
+#import "PSROptionsViewController.h"
+#import "PSRBLGameViewController.h"
 
 
 @implementation MCManager
@@ -36,13 +38,14 @@
 
 
 -(void)setupMCBrowser{
-    _browser = [[MCBrowserViewController alloc] initWithServiceType:@"chat-files" session:_session];
+    _browser = [[MCBrowserViewController alloc] initWithServiceType:@"psr-game" session:_session];
+    _browser.restorationIdentifier = @"Browser";
 }
 
 
 -(void)advertiseSelf:(BOOL)shouldAdvertise{
     if (shouldAdvertise) {
-        _advertiser = [[MCAdvertiserAssistant alloc] initWithServiceType:@"chat-files"
+        _advertiser = [[MCAdvertiserAssistant alloc] initWithServiceType:@"psr-game"
                                                            discoveryInfo:nil
                                                                  session:_session];
         [_advertiser start];

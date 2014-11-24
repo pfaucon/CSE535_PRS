@@ -46,7 +46,7 @@
     self.gameUser = [PSRUser firstInstanceWhere:@"username = ? ORDER BY id LIMIT 1", [self.loginUsernameField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
     
     if (self.gameUser) {
-        [self performSegueWithIdentifier:@"segueToGame" sender:self];
+        [self performSegueWithIdentifier:@"segueToGameOptions" sender:self];
     } else {
         [[[UIAlertView alloc] initWithTitle:@"User not found" message:[NSString stringWithFormat:@"User %@ not found", self.loginUsernameField.text]  delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
     }
@@ -62,7 +62,7 @@
     if (result) {
         self.gameUser = newUser;
         
-        [self performSegueWithIdentifier:@"segueToGame" sender:self];
+        [self performSegueWithIdentifier:@"segueToGameOptions" sender:self];
     } else {
         [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Username already exists" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
     }
@@ -100,10 +100,9 @@
 
 #pragma mark - Navigation
 
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    PSRGameViewController *dest = segue.destinationViewController;
+    PSROptionsViewController *dest = segue.destinationViewController;
     dest.gameUser = self.gameUser;
 }
 

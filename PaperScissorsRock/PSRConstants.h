@@ -14,6 +14,7 @@ typedef NS_ENUM(NSUInteger, PSRACTION) {
     ROCK,
     PAPER,
     SCISSORS,
+    NOCHOICE,
 };
 
 typedef NS_ENUM(NSUInteger, PSRUSER_GENDER) {

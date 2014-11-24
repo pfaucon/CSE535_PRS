@@ -28,6 +28,23 @@
     return outcome;
 }
 
+-(WINCONDITION)bluetoothPlayPlayerOneChoice:(PSRACTION) playerOneChoice playerTwoChoice:(PSRACTION) playerTwoChoice
+{
+    self.opponentsLastChoice = playerTwoChoice;
+    WINCONDITION outcome = (WINCONDITION) ((playerOneChoice - playerTwoChoice)+3)%3;
+    
+    if( outcome == WIN)
+    {
+        [self incrementWins];
+    }
+    if(outcome == LOSS)
+    {
+        [self incrementLosses];
+    }
+    
+    return outcome;
+}
+
 -(void)incrementWins
 {
     self.gameUser.winCnt = self.gameUser.winCnt+1;

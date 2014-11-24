@@ -13,6 +13,8 @@
 		5209845C19D3CB160002F11F /* ROCK Black.png in Resources */ = {isa = PBXBuildFile; fileRef = 5209845919D3CB160002F11F /* ROCK Black.png */; };
 		5209845D19D3CB160002F11F /* PAPER Black.png in Resources */ = {isa = PBXBuildFile; fileRef = 5209845A19D3CB160002F11F /* PAPER Black.png */; };
 		5209845E19D3CB160002F11F /* SCISSORS Black.png in Resources */ = {isa = PBXBuildFile; fileRef = 5209845B19D3CB160002F11F /* SCISSORS Black.png */; };
+		52C8C4911A22DC17009D2ABB /* PSRBLGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C8C48E1A22DC17009D2ABB /* PSRBLGameViewController.m */; };
+		52C8C4921A22DC17009D2ABB /* PSROptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C8C4901A22DC17009D2ABB /* PSROptionsViewController.m */; };
 		CE046FF819CA36DD00AE0B9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE046FF719CA36DD00AE0B9E /* Foundation.framework */; };
 		CE046FFA19CA36DD00AE0B9E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE046FF919CA36DD00AE0B9E /* CoreGraphics.framework */; };
 		CE046FFC19CA36DD00AE0B9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE046FFB19CA36DD00AE0B9E /* UIKit.framework */; };
@@ -94,13 +96,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3178D12192F2DDFCD634E6D9 /* Pods-PaperScissorsRock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperScissorsRock.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaperScissorsRock/Pods-PaperScissorsRock.debug.xcconfig"; sourceTree = "<group>"; };
 		5208C45219D283F5002413C5 /* PAPER.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PAPER.png; sourceTree = "<group>"; };
 		5208C45319D283F5002413C5 /* ROCK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ROCK.png; sourceTree = "<group>"; };
 		5208C45419D283F5002413C5 /* SCISSORS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SCISSORS.png; sourceTree = "<group>"; };
 		5209845919D3CB160002F11F /* ROCK Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ROCK Black.png"; sourceTree = "<group>"; };
 		5209845A19D3CB160002F11F /* PAPER Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PAPER Black.png"; sourceTree = "<group>"; };
 		5209845B19D3CB160002F11F /* SCISSORS Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SCISSORS Black.png"; sourceTree = "<group>"; };
-		BC33806F4CDB47579E20341E /* Pods-PaperScissorsRock.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperScissorsRock.xcconfig"; path = "Pods/Pods-PaperScissorsRock.xcconfig"; sourceTree = "<group>"; };
+		52C8C48D1A22DC17009D2ABB /* PSRBLGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRBLGameViewController.h; sourceTree = "<group>"; };
+		52C8C48E1A22DC17009D2ABB /* PSRBLGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRBLGameViewController.m; sourceTree = "<group>"; };
+		52C8C48F1A22DC17009D2ABB /* PSROptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSROptionsViewController.h; sourceTree = "<group>"; };
+		52C8C4901A22DC17009D2ABB /* PSROptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSROptionsViewController.m; sourceTree = "<group>"; };
 		CE046FF419CA36DD00AE0B9E /* PaperScissorsRock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperScissorsRock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE046FF719CA36DD00AE0B9E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CE046FF919CA36DD00AE0B9E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -146,6 +152,7 @@
 		DD8219BD19CE31B0004E96BE /* PSRUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRUser.m; sourceTree = "<group>"; };
 		DD8219BF19CE32E1004E96BE /* PSRConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRConstants.h; sourceTree = "<group>"; };
 		DD8219C019CE32E1004E96BE /* PSRConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRConstants.m; sourceTree = "<group>"; };
+		F08D5E72810810C0E67F76E1 /* Pods-PaperScissorsRock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaperScissorsRock.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaperScissorsRock/Pods-PaperScissorsRock.release.xcconfig"; sourceTree = "<group>"; };
 		FA87801919D29D0A00BFA081 /* MGlyphDetectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MGlyphDetectorView.h; path = ../MGlyphDetectorView.h; sourceTree = "<group>"; };
 		FA87801A19D29D0A00BFA081 /* MGlyphDetectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MGlyphDetectorView.m; path = ../MGlyphDetectorView.m; sourceTree = "<group>"; };
 		FA87801D19D29D3800BFA081 /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
@@ -239,6 +246,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52C8C48C1A22DBE3009D2ABB /* HW3 */ = {
+			isa = PBXGroup;
+			children = (
+				52C8C48D1A22DC17009D2ABB /* PSRBLGameViewController.h */,
+				52C8C48E1A22DC17009D2ABB /* PSRBLGameViewController.m */,
+				52C8C48F1A22DC17009D2ABB /* PSROptionsViewController.h */,
+				52C8C4901A22DC17009D2ABB /* PSROptionsViewController.m */,
+			);
+			name = HW3;
+			sourceTree = "<group>";
+		};
+		8BBBF6302525D78199F96897 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3178D12192F2DDFCD634E6D9 /* Pods-PaperScissorsRock.debug.xcconfig */,
+				F08D5E72810810C0E67F76E1 /* Pods-PaperScissorsRock.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CE046FEB19CA36DD00AE0B9E = {
 			isa = PBXGroup;
 			children = (
@@ -248,7 +275,7 @@
 				CE04701C19CA36DD00AE0B9E /* PaperScissorsRockTests */,
 				CE046FF619CA36DD00AE0B9E /* Frameworks */,
 				CE046FF519CA36DD00AE0B9E /* Products */,
-				BC33806F4CDB47579E20341E /* Pods-PaperScissorsRock.xcconfig */,
+				8BBBF6302525D78199F96897 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -286,6 +313,7 @@
 		CE046FFD19CA36DD00AE0B9E /* PaperScissorsRock */ = {
 			isa = PBXGroup;
 			children = (
+				52C8C48C1A22DBE3009D2ABB /* HW3 */,
 				CE04704019CA562E00AE0B9E /* Mesh Networking */,
 				FA87801919D29D0A00BFA081 /* MGlyphDetectorView.h */,
 				FA87801A19D29D0A00BFA081 /* MGlyphDetectorView.m */,
@@ -581,7 +609,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-PaperScissorsRock-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PaperScissorsRock/Pods-PaperScissorsRock-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -609,8 +637,10 @@
 				CE04705019CA857C00AE0B9E /* PSRGame.m in Sources */,
 				DD8219C119CE32E1004E96BE /* PSRConstants.m in Sources */,
 				FA87804D19D29D3800BFA081 /* NSDictionary_JSONExtensions.m in Sources */,
+				52C8C4911A22DC17009D2ABB /* PSRBLGameViewController.m in Sources */,
 				FA87805019D29D3800BFA081 /* CJSONSerializer.m in Sources */,
 				CE04700E19CA36DD00AE0B9E /* PSRViewController.m in Sources */,
+				52C8C4921A22DC17009D2ABB /* PSROptionsViewController.m in Sources */,
 				FA87804A19D29D3800BFA081 /* CJSONSerialization.m in Sources */,
 				FA87804719D29D3800BFA081 /* CDataScanner.m in Sources */,
 				CE04704319CA563F00AE0B9E /* MCManager.m in Sources */,
@@ -741,7 +771,7 @@
 		};
 		CE04702719CA36DD00AE0B9E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC33806F4CDB47579E20341E /* Pods-PaperScissorsRock.xcconfig */;
+			baseConfigurationReference = 3178D12192F2DDFCD634E6D9 /* Pods-PaperScissorsRock.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -763,7 +793,7 @@
 		};
 		CE04702819CA36DD00AE0B9E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC33806F4CDB47579E20341E /* Pods-PaperScissorsRock.xcconfig */;
+			baseConfigurationReference = F08D5E72810810C0E67F76E1 /* Pods-PaperScissorsRock.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
