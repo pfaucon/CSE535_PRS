@@ -18,7 +18,7 @@
 @property NSString *username;
 @property (nonatomic, strong) PSRUser *gameUser;
 
-- (IBAction)disconnect:(id)sender;
+- (IBAction)disconnectPressed:(id)sender;
 @property (nonatomic, strong) PSRAppDelegate *appDelegate;
 @property (nonatomic) PSRACTION opponentChoice;
 @property (nonatomic) PSRACTION userChoice; // -1: choice has not been made

@@ -24,7 +24,6 @@
     double y;
     double z;
     
-    NSTimer *gameTimer;
     int currGameSec;
 }
 
@@ -35,7 +34,9 @@
 @property (strong, nonatomic) MGlyphDetectorView *gestureDetectorView;
 @property (strong, nonatomic) IBOutlet UILabel *lblStatus;
 @property PSRGame *game;
+@property (nonatomic) NSTimer *gameTimer;
 
+@property (nonatomic) UIView *playAgainView;
 @end
 
 @implementation PSRBLGameViewController
@@ -58,6 +59,10 @@
                                                  name:@"MCDidReceiveDataNotification"
                                                object:nil];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didReceiveStateChangeWithNotification:)
+                                                 name:@"MCDidChangeStateNotification"
+                                               object:nil];
     // Do any additional setup after loading the view.
     self.appDelegate = (PSRAppDelegate *)[[UIApplication sharedApplication] delegate];
     
@@ -150,6 +155,7 @@
     [self updateRecordLabel];
     self.userChoice = NOCHOICE;
     currGameSec = kGameTime;
+    [self showPlayAgainView];
 }
 
 /*** Accelerometer functions ***/
@@ -321,13 +327,18 @@
     //self.lblStatus.text = glyph.name;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 /*** Gesture functions ***/
 
+-(void)didReceiveStateChangeWithNotification:(NSNotification *)notification{
+    NSNumber *currentState = [[notification userInfo] objectForKey:@"state"];
+    if(MCSessionStateNotConnected == currentState.integerValue)
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        });
+    }
+    
+}
 -(void)didReceiveDataWithNotification:(NSNotification *)notification{
     NSData *receivedData = [[notification userInfo] objectForKey:@"data"];
     NSDictionary *dicData = (NSDictionary*) [NSKeyedUnarchiver unarchiveObjectWithData:receivedData];
@@ -340,7 +351,7 @@
             if(self.userChoice == NOCHOICE)
             {
                 currGameSec = kGameTime;
-                gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(gameTimerFired) userInfo:nil repeats:YES];
+                self.gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(gameTimerFired) userInfo:nil repeats:YES];
             }
             
             else
@@ -358,7 +369,7 @@
     {
         if(self.userChoice != NOCHOICE)
         {
-            [gameTimer invalidate];
+            [self.gameTimer invalidate];
             [self submitChoice:self.userChoice];
         }
         self.gameTimeLabel.text = [NSString stringWithFormat:@"%d", currGameSec];
@@ -367,7 +378,7 @@
     
     else
     {
-        self.gameTimeLabel.text = @"Time is up";
+        self.gameTimeLabel.text = [NSString stringWithFormat:@"%d", currGameSec];
         
         if(self.userChoice == NOCHOICE)
         {
@@ -375,14 +386,18 @@
             self.userChoice = (PSRACTION) arc4random()%3;
             [self sendChoice:self.userChoice];
             [self submitChoice:self.userChoice];
-            [gameTimer invalidate];
+            [self.gameTimer invalidate];
         }
-        [gameTimer invalidate];
+        [self.gameTimer invalidate];
     }
 }
-
-- (IBAction)disconnect:(id)sender {
+-(void)disconnectMesh
+{
+    
     [self.appDelegate.mcManager disableMeshNetworking];
+}
+- (IBAction)disconnectPressed:(id)sender {
+    [self disconnectMesh];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
@@ -402,6 +417,69 @@
     {
         NSLog(@"%@", error);
     }
+}
+
+#pragma mark - Play Again?
+-(void) showPlayAgainView
+{
+    float xSize = self.view.frame.size.width;
+    float ySize = self.view.frame.size.height;
+    UIView *view = [[UIView alloc] initWithFrame:self.view.frame];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, ySize/2 - 20, xSize-40, 20)];
+    UIButton *playAgain = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIButton *dismissButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    
+    label.text = @"Would you like to play again?";
+    label.textAlignment = NSTextAlignmentCenter;
+    [view addSubview:label];
+    
+    playAgain.frame = CGRectMake(20+10+xSize/2, ySize/2 + 20, xSize/2-50, 30);
+    [playAgain setTitle:@"Play Again!" forState:UIControlStateNormal];
+    [playAgain addTarget:self action:@selector(playAgainPressed) forControlEvents:UIControlEventTouchUpInside];
+    [view addSubview:playAgain];
+    
+    dismissButton.frame = CGRectMake(20, ySize/2 + 20, xSize/2-50, 30);
+    [dismissButton setTitle:@"Stop Playing :(" forState:UIControlStateNormal];
+    [dismissButton addTarget:self action:@selector(dismissPressed) forControlEvents:UIControlEventTouchUpInside];
+    [view addSubview:dismissButton];
+    
+    view.backgroundColor = [UIColor whiteColor];
+    view.alpha =0;
+    [self.view addSubview:view];
+    
+    self.playAgainView = view;
+    
+    [UIView animateWithDuration:.3 animations:^{
+        view.alpha =1;
+    }];
+}
+
+-(void)dismissPressed
+{
+    [self disconnectMesh];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+-(void)playAgainPressed
+{
+    [UIView animateKeyframesWithDuration:.3 delay:0.0 options:UIViewKeyframeAnimationOptionAllowUserInteraction animations:^{
+        self.playAgainView.alpha=0;
+    } completion:^(BOOL finished) {
+        [self.playAgainView removeFromSuperview];
+    }];
+}
+
+#pragma mark - Custom Setters
+-(void)setGameTimer:(NSTimer *)gameTimer
+{
+    [_gameTimer invalidate];
+    _gameTimer = gameTimer;
+}
+
+-(void)setPlayAgainView:(UIView *)playAgainView
+{
+    [_playAgainView removeFromSuperview];
+    _playAgainView = playAgainView;
 }
 
 @end
