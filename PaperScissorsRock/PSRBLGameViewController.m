@@ -25,6 +25,8 @@
     double z;
     
     int currGameSec;
+    NSTimer *playAgainViewTimer;
+    int currPlayAgainSec;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *congratulationsLabel;
@@ -155,7 +157,23 @@
     [self updateRecordLabel];
     self.userChoice = NOCHOICE;
     currGameSec = kGameTime;
-    [self showPlayAgainView];
+    
+    currPlayAgainSec = 1;
+    playAgainViewTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(playAgainViewTimerFired) userInfo:nil repeats:YES];
+}
+
+- (void)playAgainViewTimerFired
+{
+    if(currPlayAgainSec <= kGameTime && currPlayAgainSec >= 0)
+    {
+        currPlayAgainSec -= 1;
+    }
+    
+    else
+    {
+        [self showPlayAgainView];
+        [playAgainViewTimer invalidate];
+    }
 }
 
 /*** Accelerometer functions ***/
